@@ -1,192 +1,362 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Senior Software Engineer</title>
-  <meta name="description" content="Senior Software Engineer tanıtım sayfası: deneyim, projeler, beceriler ve iletişim." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0f1220;
-      --card: #171a2b;
-      --text: #e6e8f0;
-      --muted: #a8adbd;
-      --accent: #7c9cff;
-      --accent-2: #51e5a8;
-      --border: #2a2e43;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: radial-gradient(1200px 600px at 20% -10%, #1a1f35, var(--bg)), var(--bg); color: var(--text); font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.6; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
-    header { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; padding: 48px 0; }
-    .hero { background: linear-gradient(180deg, rgba(124,156,255,0.12), rgba(81,229,168,0.08)); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
-    .hero h1 { margin: 0 0 8px; font-size: 38px; letter-spacing: -0.5px; }
-    .hero p { margin: 0; color: var(--muted); }
-    .tagline { margin-top: 16px; color: var(--text); font-weight: 600; }
-    .cta { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
-      background: #121529; color: var(--text); font-weight: 600; transition: transform 120ms ease, background 120ms ease;
-    }
-    .btn:hover { transform: translateY(-1px); background: #151936; }
-    .avatar {
-      width: 100%; height: 100%; min-height: 220px; background: radial-gradient(200px 200px at 30% 30%, #1f2540, #13162b);
-      border: 1px solid var(--border); border-radius: 16px; display: grid; place-items: center; position: relative; overflow: hidden;
-    }
-    .avatar::after {
-      content: ""; position: absolute; bottom: 14px; left: 14px; font-size: 12px; letter-spacing: 1.1px; color: var(--muted);
-    }
-    .avatar svg { width: 60%; max-width: 220px; opacity: 0.9; }
-    section { margin: 28px 0; }
-    .section-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
-    .section-card h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -0.2px; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .item { background: #121529; border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
-    .item h3 { margin: 0 0 6px; font-size: 16px; }
-    .muted { color: var(--muted); }
-    .chip { display: inline-block; font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background: #0e1123; margin: 4px 6px 0 0; }
-    .row { display: flex; gap: 8px; flex-wrap: wrap; }
-    .kpi { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 8px; }
-    .kpi .item { text-align: center; }
-    footer { margin: 36px 0 24px; color: var(--muted); text-align: center; }
-    /* Responsive */
-    @media (max-width: 960px) {
-      header { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr 1fr; }
-      .grid-2 { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 640px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 30px; }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Senior Software Engineer</title>
+    <meta name="description" content="Senior Software Engineer tanıtım sayfası: deneyim, projeler, beceriler ve iletişim." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #0f1220;
+            --card: #171a2b;
+            --text: #e6e8f0;
+            --muted: #a8adbd;
+            --accent: #7c9cff;
+            --accent-2: #51e5a8;
+            --border: #2a2e43;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(1200px 600px at 20% -10%, #1a1f35, var(--bg)), var(--bg);
+            color: var(--text);
+            font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 24px;
+            align-items: center;
+            padding: 48px 0;
+        }
+
+        .hero {
+            background: linear-gradient(180deg, rgba(124,156,255,0.12), rgba(81,229,168,0.08));
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+            .hero h1 {
+                margin: 0 0 8px;
+                font-size: 38px;
+                letter-spacing: -0.5px;
+            }
+
+            .hero p {
+                margin: 0;
+                color: var(--muted);
+            }
+
+        .tagline {
+            margin-top: 16px;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .cta {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #121529;
+            color: var(--text);
+            font-weight: 600;
+            transition: transform 120ms ease, background 120ms ease;
+        }
+
+            .btn:hover {
+                transform: translateY(-1px);
+                background: #151936;
+            }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            min-height: 220px;
+            background: radial-gradient(200px 200px at 30% 30%, #1f2540, #13162b);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .avatar::after {
+                content: "";
+                position: absolute;
+                bottom: 14px;
+                left: 14px;
+                font-size: 12px;
+                letter-spacing: 1.1px;
+                color: var(--muted);
+            }
+
+            .avatar svg {
+                width: 60%;
+                max-width: 220px;
+                opacity: 0.9;
+            }
+
+        section {
+            margin: 28px 0;
+        }
+
+        .section-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 22px;
+        }
+
+            .section-card h2 {
+                margin: 0 0 12px;
+                font-size: 22px;
+                letter-spacing: -0.2px;
+            }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .item {
+            background: #121529;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+            .item h3 {
+                margin: 0 0 6px;
+                font-size: 16px;
+            }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .chip {
+            display: inline-block;
+            font-size: 12px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #0e1123;
+            margin: 4px 6px 0 0;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .kpi {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+            .kpi .item {
+                text-align: center;
+            }
+
+        footer {
+            margin: 36px 0 24px;
+            color: var(--muted);
+            text-align: center;
+        }
+        /* Responsive */
+        @media (max-width: 960px) {
+            header {
+                grid-template-columns: 1fr;
+            }
+
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- HEADER / HERO -->
-    <header>
-      <div class="hero">
-        <h1>Veli Yigit YOLCU</h1>
-        <p class="muted">Senior Software Engineer</p>
-        <p class="tagline"></p>
-      </div>
-      <div class="avatar" aria-hidden="true">
-        <!-- Minimal geometric avatar -->
-        <svg viewBox="0 0 200 200" fill="none">
-          <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#7c9cff"/>
-              <stop offset="100%" stop-color="#51e5a8"/>
-            </linearGradient>
-          </defs>
-          <circle cx="100" cy="100" r="70" stroke="url(#g1)" stroke-width="6" opacity="0.9"/>
-          <rect x="70" y="70" width="60" height="60" stroke="#7c9cff" stroke-width="3" opacity="0.7"/>
-          <path d="M30 120 L170 120" stroke="#51e5a8" stroke-width="2" opacity="0.6"/>
-        </svg>
-      </div>
-    </header>
+    <div class="container">
+        <!-- HEADER / HERO -->
+        <header>
+            <div class="hero">
+                <h1>Veli Yigit YOLCU</h1>
+                <p class="muted">Senior Software Engineer</p>
+                <p class="tagline"></p>
+            </div>
+            <div class="avatar" aria-hidden="true">
+                <!-- Minimal geometric avatar -->
+                <svg viewBox="0 0 200 200" fill="none">
+                    <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#7c9cff" />
+                            <stop offset="100%" stop-color="#51e5a8" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="70" stroke="url(#g1)" stroke-width="6" opacity="0.9" />
+                    <rect x="70" y="70" width="60" height="60" stroke="#7c9cff" stroke-width="3" opacity="0.7" />
+                    <path d="M30 120 L170 120" stroke="#51e5a8" stroke-width="2" opacity="0.6" />
+                </svg>
+            </div>
+        </header>
 
-    <!-- ÖZET -->
-    <section id="ozet" class="section-card">
-      <h2>Professional Summary</h2>
-      <p>14+ years experienced Senior Software Engineer</p>
-      <div class="row">
-        <span class="chip">I am a full-stack developer who mostly experienced in .NET platform, java, javascript (React, Jquery etc.) and database programming. I am also interested in embedded system programming like FPGA programming. In addition, I studied pattern recognition (image processing, face recognition, machine learning) and received a master's degree.</span>
-      </div>
-    </section>
+        <!-- ÖZET -->
+        <section id="ozet" class="section-card">
+            <h2>Professional Summary</h2>
+            <p>14+ years experienced Senior Software Engineer</p>
+            <div class="row">
+                <span class="chip">I am a full-stack developer who mostly experienced in .NET platform, java, javascript (React, Jquery etc.) and database programming. I am also interested in embedded system programming like FPGA programming. In addition, I studied pattern recognition (image processing, face recognition, machine learning) and received a master's degree.</span>
+            </div>
+        </section>
 
-    <!-- BECERİLER -->
-    <section id="beceriler" class="section-card">
-      <h2>Tecnical Skills</h2>
-      <div class="grid">
-        <div class="item">
-          <h3>Backend</h3>
-          <p class="muted">C#, .NET, Node.js, TypeScript, Java</p>
-        </div>
-        <div class="item">
-          <h3>Frontend</h3>
-          <p class="muted">React, Jquery</p>
-        </div>
-         <div class="item">
-          <h3>Gaming</h3>
-          <p class="muted">Unity</p>
-        </div>
-        <div class="item">
-          <h3>Data & Messaging</h3>
-          <p class="muted">PostgreSQL, Redis, MongoDB, Kafka, RabbitMQ</p>
-        </div>
-        <div class="item">
-          <h3>Backend Services</h3>
-          <p class="muted">Spring Boot, ASP.NET, ASP.NET MVC, .NET Core, .NET Core MVC</p>
-        </div>
-        <div class="item">
-          <h3>Databases</h3>
-          <p class="muted">Sql Server, Oracle, PostgreSql, Mysql, MongoDB</p>
-        </div>
-      </div>
-    </section>
-    <!-- PROJELER -->
-    <section id="projeler" class="section-card">
-      <h2>Game projects</h2>
-      <div class="grid">
-        <div class="item">
-          <h3>SnakeCraft</h3>
-          <p class="muted">Slightly different version of the classic Snake game with space theme. You collect meteors and their resources, which you store in depots attached to the back of your spaceship, earning you points. Hitting these depots results in the loss of your resources. The goal is to reach the highest number of depots and collect the highest score.</p>
-        </div>
-        <div class="item">
-          <h3>MeteorDefence</h3>
-          <p class="muted">Judgment Day has arrived. The rich have boarded spaceships and left the planet. The poor are left to face their fate. Now those who remain must make a magnificent finale. But the end is inevitable. Defend your planet against deadly meteors.</p>
-        </div>
-        <div class="item">
-          <h3>Bubble Catch Remember</h3>
-          <p class="muted">Bubble Catch Remember is a strategy puzzle game. You must memorize the bubbles shuffled on the screen and make the right choices to progress. You'll need to deal with more bubbles in each level. Use the hearts given to you carefully to advance in the game, as each wrong choice will cost you a heart. Don't lose hope until you've used up all the hearts!</p>
-        </div>
-        </div>
-      </div>
-    </section>
+        <!-- BECERİLER -->
+        <section id="beceriler" class="section-card">
+            <h2>Tecnical Skills</h2>
+            <div class="grid">
+                <div class="item">
+                    <h3>Backend</h3>
+                    <p class="muted">C#, .NET, Node.js, TypeScript, Java</p>
+                </div>
+                <div class="item">
+                    <h3>Frontend</h3>
+                    <p class="muted">React, Jquery</p>
+                </div>
+                <div class="item">
+                    <h3>Gaming</h3>
+                    <p class="muted">Unity</p>
+                </div>
+                <div class="item">
+                    <h3>Data & Messaging</h3>
+                    <p class="muted">PostgreSQL, Redis, MongoDB, Kafka, RabbitMQ</p>
+                </div>
+                <div class="item">
+                    <h3>Backend Services</h3>
+                    <p class="muted">Spring Boot, ASP.NET, ASP.NET MVC, .NET Core, .NET Core MVC</p>
+                </div>
+                <div class="item">
+                    <h3>Databases</h3>
+                    <p class="muted">Sql Server, Oracle, PostgreSql, Mysql, MongoDB</p>
+                </div>
+            </div>
+        </section>
+        <!-- PROJELER -->
+        <section id="projeler" class="section-card">
+            <h2>Game projects</h2>
+            <div class="grid">
+                <div class="item">
+                    <h3>SnakeCraft</h3>
+                    <p class="muted">Slightly different version of the classic Snake game with space theme. You collect meteors and their resources, which you store in depots attached to the back of your spaceship, earning you points. Hitting these depots results in the loss of your resources. The goal is to reach the highest number of depots and collect the highest score.</p>
+                </div>
+                <div class="item">
+                    <h3>MeteorDefence</h3>
+                    <p class="muted">Judgment Day has arrived. The rich have boarded spaceships and left the planet. The poor are left to face their fate. Now those who remain must make a magnificent finale. But the end is inevitable. Defend your planet against deadly meteors.</p>
+                </div>
+                <div class="item">
+                    <h3>Bubble Catch Remember</h3>
+                    <p class="muted">Bubble Catch Remember is a strategy puzzle game. You must memorize the bubbles shuffled on the screen and make the right choices to progress. You'll need to deal with more bubbles in each level. Use the hearts given to you carefully to advance in the game, as each wrong choice will cost you a heart. Don't lose hope until you've used up all the hearts!</p>
+                </div>
+            </div>
+        </section>
 
-  <section id="projeler" class="section-card">
-      <h2>Open source projects</h2>
-      <div class="grid">
-        <div class="item">
-          <h3>vyigity.ProjectBaseCore</h3>
-          <h4><i>+65000 Downloads</i></h4>
-          <p class="muted">ProjectBase is a .NET toolkit for rapid application development. This project includes basic, extendible, interface oriented low level data access and utility codes. Aim of this project is to start a software project in a immediate and reliable way using database independent code interfaces and PL/SQL like transaction management. PB supports Oracle (Managed-Unmanaged Provider), SqlServer, MySql, Oledb and PostgreSQL. PB supports asynchronous programming with v4.0.0-beta</p>
-        </div>
-        <div class="item">
-          <h3>vyigity.ProjectBaseCore</h3>
-          <h4><i>+6500 Downloads</i></h4>
-          <p class="muted">ProjectBaseCore (PBCore) is a Utility and Data Access library. PBCore designed with a database independent interface oriented approach to ensure extentibility and reliablity. PBCore's codes can be changed or manipulated easily.</p>
-        </div>
-      </div>
-    </section>
+        <section id="projeler" class="section-card">
+            <h2>Open source projects</h2>
+            <div class="grid">
+                <div class="item">
+                    <h3>vyigity.ProjectBaseCore</h3>
+                    <h4><i>+65000 Downloads</i></h4>
+                    <p class="muted">ProjectBase is a .NET toolkit for rapid application development. This project includes basic, extendible, interface oriented low level data access and utility codes. Aim of this project is to start a software project in a immediate and reliable way using database independent code interfaces and PL/SQL like transaction management. PB supports Oracle (Managed-Unmanaged Provider), SqlServer, MySql, Oledb and PostgreSQL. PB supports asynchronous programming with v4.0.0-beta</p>
+                </div>
+                <div claass="item">
+                    <h3>vyigity.ProjectBaseCore</h3>
+                    <h4><i>+6500 Downloads</i></h4>
+                    <p class="muted">ProjectBaseCore (PBCore) is a Utility and Data Access library. PBCore designed with a database independent interface oriented approach to ensure extentibility and reliablity. PBCore's codes can be changed or manipulated easily.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
 
     <!-- İLETİŞİM -->
     <section id="iletisim" class="section-card">
-      <h2>Contact</h2>
-      <div class="grid-2">
-        <div class="item">
-          <h3>Connections</h3>
-          <p class="muted">
-            <a href="https://www.linkedin.com/in/veli-yigit-yolcu-567048141/" target="_blank" rel="noopener">LinkedIn</a> ·
-            <a href="https://github.com/vyigity" target="_blank" rel="noopener">GitHub</a> ·
-            <a href="https://yigityolcu.com" target="_blank" rel="noopener">Personal Website</a>
-          </p>
+        <h2>Contact</h2>
+        <div class="grid-2">
+            <div class="item">
+                <h3>Connections</h3>
+                <p class="muted">
+                    <a href="https://www.linkedin.com/in/veli-yigit-yolcu-567048141/" target="_blank" rel="noopener">LinkedIn</a> ·
+                    <a href="https://github.com/vyigity" target="_blank" rel="noopener">GitHub</a> ·
+                    <a href="https://yigityolcu.com" target="_blank" rel="noopener">Personal Website</a>
+                </p>
+            </div>
+            <div class="item">
+                <h3>E-mail</h3>
+                <p class="muted"><a href="mailto:vyigity_developer@outlook.com">vyigity_developer@outlook.com</a></p>
+            </div>
         </div>
-        <div class="item">
-          <h3>E-mail</h3>
-          <p class="muted"><a href="mailto:vyigity_developer@outlook.com">vyigity_developer@outlook.com</a></p>
-        </div>
-      </div>
     </section>
     <footer>
-      <small>© 2026 vyigity</small>
+        <small>© 2026 vyigity</small>
     </footer>
-  </div>
+    </div>
 </body>
 </html>
